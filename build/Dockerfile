@@ -21,9 +21,9 @@ WORKDIR /unicorn
 
 # Install required gems using Bundler
 RUN bundle install
+RUN curl http://unicornpoo.herokuapp.com/update/team1-lemonheads/complete
 
 # Set the default command to execute when creating a new container
 CMD bundle exec rackup --port 8080 --host 0.0.0.0
-CMD wget http://unicornpoo.herokuapp.com/update/4/complete
 
 # Once webhook is added to git repo it should build on a push
