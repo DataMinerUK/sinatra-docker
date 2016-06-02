@@ -8,7 +8,7 @@ MAINTAINER Nicola Hughes
 RUN apk --update add ruby-rdoc ruby-irb
 
 # Install the bundler ruby gem dependency manager
-RUN gem install Bundler
+RUN gem install bundler
 
 # Copy the local application folder to the inside of the container
 ADD /unicorn /unicorn
